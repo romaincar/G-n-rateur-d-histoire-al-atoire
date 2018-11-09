@@ -9,7 +9,7 @@ var temperatures = ['10°c','30°c','5°c','50°c','12°c','100°c','69°c','18�
 
 var lieux = ['floyon','wignehies','barcelone','paris','tokyo','reykjavik','bondy','rio de janeiro','le mans','le touquet','big ben','mont fuji','palais de elysee','mairie de paris','mc donalds','kfc','burger king','montcuq','chutes du niagara','hidepark'];
 
-var verbes = ['coder','copier','coordonner','nager','monter','avoir','aimer','etre passionne','developper','jouer','soulever','evoluer','voter','arnaquer','manger','envoyer','enfourner','accomplir','communiquer'];
+var verbes = ['code','copie','coordonne','nage','monte','a','aime','est passionne','developpe','joue','souleve','evolue','vote','arnaque','mange','envoie','enfourne','accomplit','communique'];
 
 //
     var texte = document.getElementById("texte").value;
@@ -37,12 +37,12 @@ document.getElementById("bouton").addEventListener ('click',
 
 
         if (nom_random >= 5) {
-            document.getElementById("affichage").innerHTML += nb_aleatoire_noms + " " + nb_aleatoire_objets + " " + nb_aleatoire_temperatures + " " + nb_aleatoire_lieux + " " + nb_aleatoire_verbes;
+            document.getElementById("affichage").innerHTML += nb_aleatoire_noms + " " + " se penche de " +" " + nb_aleatoire_temperatures + " pour prendre ce" + " " + nb_aleatoire_objets + " " + "et se dirige vers" + " " + nb_aleatoire_lieux + " " + "puis" + " " + nb_aleatoire_verbes + "du pâté";
 
         }
 
         if (nom_random < 5) {
-            document.getElementById("affichage").innerHTML += texte + " " + nb_aleatoire_objets + " " + nb_aleatoire_temperatures + " " + nb_aleatoire_lieux + " " + nb_aleatoire_verbes;
+            document.getElementById("affichage").innerHTML += nb_aleatoire_noms + " " + " se penche de " +" " + nb_aleatoire_temperatures + " pour prendre ce" + " " + nb_aleatoire_objets + " " + "et se dirige vers" + " " + nb_aleatoire_lieux + " " + "puis" + " " + nb_aleatoire_verbes + "du pâté";
         }
 
     }
