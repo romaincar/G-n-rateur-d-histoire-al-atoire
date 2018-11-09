@@ -11,52 +11,60 @@ var lieux = ['floyon','wignehies','barcelone','paris','tokyo','reykjavik','bondy
 
 var verbes = ['coder','copier','coordonner','nager','monter','avoir','aimer','etre passionne','developper','jouer','soulever','evoluer','voter','arnaquer','manger','envoyer','enfourner','accomplir','communiquer'];
 
-
-function abc() {
-
-
+//
     var texte = document.getElementById("texte").value;
 
+//
 
-    var nom_random = Math.floor(Math.random() * 10);
+document.getElementById("bouton").addEventListener ('click',
 
-    var nb_aleatoire_noms = Math.floor((Math.random() * noms.length));
+    function () {
 
-    var nb_aleatoire_objets = Math.floor((Math.random() * objets.length));
+    for (var i=0; i < 3; i++) {
 
-    var nb_aleatoire_temperatures = Math.floor((Math.random() * temperatures.length));
+        var nom_random = Math.floor(Math.random() * 10);
 
-    var nb_aleatoire_lieux = Math.floor((Math.random() * lieux.length));
+        var nb_aleatoire_noms = noms[Math.floor(Math.random() * noms.length)];
 
-    var nb_aleatoire_verbes = Math.floor((Math.random() * verbes.length));
+        var nb_aleatoire_objets = objets[Math.floor(Math.random() * objets.length)];
 
+        var nb_aleatoire_temperatures = temperatures[Math.floor(Math.random() * temperatures.length)];
 
-    var recup_noms = noms[nb_aleatoire_noms];
+        var nb_aleatoire_lieux = lieux[Math.floor(Math.random() * lieux.length)];
 
-    var recup_objets = objets[nb_aleatoire_objets];
-
-    var recup_temperatures = temperatures[nb_aleatoire_temperatures];
-
-    var recup_lieux = lieux[nb_aleatoire_lieux];
-
-    var recup_verbes = verbes[nb_aleatoire_verbes];
+        var nb_aleatoire_verbes = verbes[Math.floor(Math.random() * verbes.length)];
 
 
-    if (nom_random >= 5) {
-        document.getElementById("affichage").innerHTML = recup_noms + " " + recup_objets + " " + recup_temperatures + " " + recup_lieux + " " + recup_verbes;
 
-    }
+        if (nom_random >= 5) {
+            document.getElementById("affichage").innerHTML += nb_aleatoire_noms + " " + nb_aleatoire_objets + " " + nb_aleatoire_temperatures + " " + nb_aleatoire_lieux + " " + nb_aleatoire_verbes;
 
-    if (nom_random < 5) {
-        document.getElementById("affichage").innerHTML = texte + " " + recup_objets + " " + recup_temperatures + " " + recup_lieux + " " + recup_verbes;
-    }
-}
+        }
 
+        if (nom_random < 5) {
+            document.getElementById("affichage").innerHTML += texte + " " + nb_aleatoire_objets + " " + nb_aleatoire_temperatures + " " + nb_aleatoire_lieux + " " + nb_aleatoire_verbes;
+        }
 
-document.getElementById("bouton").addEventListener ('click',function () {
-    for (var i=0; i <= 3; i++) {
-        abc();
     }
 
 
 });
+
+
+
+
+/* var recup_noms = noms[nb_aleatoire_noms];
+
+        var recup_objets = objets[nb_aleatoire_objets];
+
+        var recup_temperatures = temperatures[nb_aleatoire_temperatures];
+
+        var recup_lieux = lieux[nb_aleatoire_lieux];
+
+        var recup_verbes = verbes[nb_aleatoire_verbes]; */
+
+
+
+
+
+
